@@ -1,3 +1,7 @@
 setxkbmap br
-feh --bg-fill ~/Pictures/minimalistic_arch_linux_wallpaper_by_malkowitch-dahpghs.jpg
+
+xinput set-prop 12 278 1
+
+feh --bg-fill ~/Pictures/benjamin-hung-340384-unsplash.jpg
+
 exec i3

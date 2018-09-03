@@ -50,13 +50,16 @@ bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run -fg "#333333" -bg "#f1f1f1" -hlbg "#ffffff" -hlfg "#336699" -o 85
 bindsym $mod+w exec rofi -show window -bg "#f1f1f1" -fg "#333333" -hlbg "#ffffff" -hlfg "#336699" -o 85
 
+# start file manager
+bindsym $mod+e exec thunar
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 gaps inner 12
-gaps outer 12
+# gaps outer 6
 smart_gaps true
 
 # class         border	backgr.	text	indicator	child_border
@@ -194,8 +197,10 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3status
-	position top
-}
+#bar {
+#    status_command i3status
+#    positionposition top
+#}
 
+exec_always --no-startup-id $HOME/.config/polybar/polybarstart
+# exec compton

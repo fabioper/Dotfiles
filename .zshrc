@@ -61,6 +61,10 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+#
+# zsh-syntax-highlighting: 
+# Run this on the terminal
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 plugins=(
   git,
   zsh-syntax-highlighting
@@ -96,6 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias pac="sudo pacman -S"
+alias pacup="sudo pacman -Syu"
 alias pacr="sudo pacman -Rs"
 alias aur="yay -S"
+alias syse="sudo systemctl enable"
+alias sysd="sudo systemctl disable"
+alias py="python3"
 
+PATH="$HOME/workspace/scripts:$PATH"
+export PATH
