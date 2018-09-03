@@ -1,3 +1,4 @@
+colorscheme spacegray
 set nocompatible  " be iMproved, required
 filetype off  " required
 set exrc
@@ -17,6 +18,9 @@ Plugin 'scrooloose/nerdtree'
 " ==== Completion
 Plugin 'Valloric/YouCompleteMe'
 
+" ==== Wakatime
+Plugin 'wakatime/vim-wakatime'
+
 " ==== Git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -32,8 +36,16 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'ap/vim-css-color'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'mxw/vim-jsx'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'emmetio/emmet'
+Plugin 'othree/html5.vim'
+Plugin 'fatih/vim-go'
+Plugin 'mattn/emmet-vim'
+Plugin 'alvan/vim-closetag'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'moll/vim-node'
+Plugin 'ruanyl/vim-fixmyjs'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'elzr/vim-json'
+
 
 " ==== moving / searching
 Plugin 'easymotion/vim-easymotion'
@@ -48,17 +60,24 @@ Plugin 'bling/vim-airline'
 
 " ==== PLUGIN THEMES
 Plugin 'morhetz/gruvbox'
+Plugin 'joshdick/onedark.vim'
+Plugin 'ajh17/spacegray.vim'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
 
 " ==== Colors and other basic settings
-colorscheme gruvbox
+colorscheme spacegray
+
+let g:gruvbox_contrast_dark = "hard"
+let g:airline_theme='deus'
+
 set guifont=Monospace\ 10
 set fillchars+=vert:\$
 syntax enable
 set background=dark
-set ruler
+" set ruler
 set hidden
 set number
 set laststatus=2
@@ -66,7 +85,7 @@ set smartindent
 set st=4 sw=4 et
 set shiftwidth=4
 set tabstop=4
-let &colorcolumn="80"
+" let &colorcolumn="80"
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
@@ -130,5 +149,5 @@ set mouse=c
 set shortmess+=A
 
 " ==== custom commands
-command JsonPretty execute ":%!python -m json.tool"
+" command JsonPretty execute ":%!python -m json.tool"
 set secure
