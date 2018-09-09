@@ -2,9 +2,9 @@ setxkbmap br
 
 xinput set-prop 12 278 1
 
-feh --bg-fill ~/Pictures/benjamin-hung-340384-unsplash.jpg
+feh --bg-fill ~/Pictures/arch-linux-minimalism-4k-up-1366x768.jpg
 
-xcompmgr -c &
+compton -b &
 polybarstart &
 sxhkd &
 exec bspwm
