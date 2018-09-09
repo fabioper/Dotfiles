@@ -1,4 +1,3 @@
-colorscheme spacegray
 set nocompatible  " be iMproved, required
 filetype off  " required
 set exrc
@@ -45,6 +44,11 @@ Plugin 'moll/vim-node'
 Plugin 'ruanyl/vim-fixmyjs'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'elzr/vim-json'
+Plugin 'suan/vim-instant-markdown'
+
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'w0rp/ale'
 
 
 " ==== moving / searching
@@ -62,30 +66,40 @@ Plugin 'bling/vim-airline'
 Plugin 'morhetz/gruvbox'
 Plugin 'joshdick/onedark.vim'
 Plugin 'ajh17/spacegray.vim'
+Plugin 'yuttie/inkstained-vim'
+Plugin 'tyrannicaltoucan/vim-quantum'
 Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
 
 " ==== Colors and other basic settings
-colorscheme spacegray
+set background=dark
+"set termguicolors
+colorscheme onedark
 
-let g:gruvbox_contrast_dark = "hard"
+
 let g:airline_theme='deus'
+
+" ==== ALE
+let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fix_on_save = 1
 
 set guifont=Monospace\ 10
 set fillchars+=vert:\$
 syntax enable
-set background=dark
 " set ruler
 set hidden
 set number
 set laststatus=2
 set smartindent
-set st=4 sw=4 et
+"set st=4 sw=4 et
 set shiftwidth=4
 set tabstop=4
 " let &colorcolumn="80"
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
