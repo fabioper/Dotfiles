@@ -6,6 +6,9 @@ monitor = LVDS-1
 width = 100%
 height = 34
 
+override-redirect = true
+wm-restack = bspwm
+
 background = #00000000
 foreground = #ccffffff
 
@@ -29,6 +32,8 @@ monitor = LVDS-1
 bottom = true
 width = 100%
 height = 27
+override-redirect = true
+wm-restack = bspwm
 
 background = ${bar/example.background}
 foreground = ${bar/example.foreground}
