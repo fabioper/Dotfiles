@@ -24,8 +24,9 @@ font-1 = MaterialIcons:size=10;0
 font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
 
-modules-left = powermenu mpd
-modules-right = volume backlight wireless-network wired-network battery date
+modules-left = powermenu mpd xwindow
+modules-right = volume backlight xkeyboard wireless-network wired-network battery date
+;modules-center = xwindow
 
 [bar/bottom]
 monitor = LVDS-1
@@ -55,6 +56,18 @@ font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = bspwm
 modules-right = cpu memory
+
+[module/xwindow]
+type = internal/xwindow
+format = <label>
+format-foreground = #2ADE66
+format-padding = 4
+
+[module/xkeyboard]
+type = internal/xkeyboard
+format = <label-layout> <label-indicator>
+label-layout = %layout%
+label-layout-padding = 0
 
 [module/backlight]
 type = internal/xbacklight
