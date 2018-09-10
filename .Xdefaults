@@ -5,26 +5,25 @@ Xft.hinting:            true
 Xft.autohint:           true
 Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
-Xft*dpi:                96
+Xft.dpi:                96
 
 URxvt.font:             xft:Iosevka:style=Medium:size=11
 URxvt.scrollBar:        true
 URxvt.scrollBar_right:  true
 URxvt.scrollstyle:      plain
 URxvt.thickness:        3
-URxvt*cursorUnderline:  true
+URxvt.cursorUnderline:  true
 
 URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
-!URxvt*depth: 32
-!URxvt*transparent: true
-!URxvt*shading: 5
+URxvt.depth: 32
+URxvt.background: [87]#1b1b1b
 
 URxvt.colorUL: #5f8191
 
-*background: #1b1b1b
+! *background: #1b1b1b
 *foreground: #B7BBB7
 
 ! black
